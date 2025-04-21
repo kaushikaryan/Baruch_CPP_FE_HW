@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="ConditionalExpressions.cpp">
+    <ClCompile Include="freq.c">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

@@ -21,8 +21,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{af1bfaa2-65bb-4d44-a617-79d28ded9d7f}</ProjectGuid>
-    <RootNamespace>My139</RootNamespace>
+    <ProjectGuid>{df3dd54b-9fd4-4c32-a3dd-ccdf0d720694}</ProjectGuid>
+    <RootNamespace>My145</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -127,7 +127,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="ConditionalExpressions.cpp" />
+    <ClCompile Include="PrintTemperatures2.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="ConditionalExpressions.cpp">
+    <ClCompile Include="PrintTemperatures2.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

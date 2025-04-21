@@ -1,0 +1,39 @@
+// freq.c
+//
+// C program to count frequency of different 
+// numbers and characters
+// 
+// @author : Kaushik Aryan
+// @date   : 21-04-2025
+
+#include <stdio.h>
+
+int main()
+{
+    int curr = NULL, count0 = 0, count1 = 0, count2 = 0, count3 = 0, count4 = 0, countOther = 0;
+    printf("Enter some numbers:\n");
+    while ((curr = getchar()) != EOF)
+    {
+        switch (curr)
+        {
+        case 48:
+            count0++;
+            break;
+        case 49:
+            count1++;
+            break;
+        case 50:
+            count2++;
+            break;
+        case 51:
+            count3++;
+            break;
+        case 52:
+            count4++;
+            break;
+        default:
+            countOther++;
+        }
+    }
+    printf("Count of 0s:%d\nCount of 1s:%d\nCount of 2s:%d\nCount of 3s:%d\nCount of 4s:%d\nCount of other characters:%d\n", count0, count1, count2, count3, count4, countOther);
+}
