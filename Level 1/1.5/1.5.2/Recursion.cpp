@@ -4,24 +4,40 @@
 // using recursion
 // 
 // @author : Kaushik Aryan
-// @date   : 22-04-2025
+// @date   : 05-05-2025
 
 #include <stdio.h>
 
-int factorial(int num);
+// Function declaration
+long long int factorial(long long int num);
 
 int main()
 {
-    int num = NULL;
-    printf("Enter the first number: ");
-    scanf_s("%d", &num);
-    int ans = factorial(num);
-    printf("The factorial of %d is: %d\n", num, ans);
+    // Initialize variable
+    int num = -1;
+
+    // Request user to input a number, until valid input received
+    while (num<0)
+    {
+        printf("Enter a non-negative number to compute its factorial: ");
+        scanf_s("%d", &num);
+    }
+
+    // Compute factorial
+    long long int ans = factorial(num); 
+
+    // Print result
+    printf("The factorial of %d is: %lld\n", num, ans);
 }
 
-int factorial(int num)
+// Function implementation
+long long int factorial(long long int num)
 {
+    // Base case (0! = 1)
     if (num <= 1)
-        return 1;`
+    {
+        return 1;
+    }
+    // Recursive call
     return num * factorial(num - 1);
 }

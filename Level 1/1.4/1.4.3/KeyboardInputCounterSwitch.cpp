@@ -4,40 +4,57 @@
 // using While loop and Switch Case
 // 
 // @author : Kaushik Aryan
-// @date   : 21-04-2025
+// @date   : 05-05-2025
 
 #include <stdio.h>
 
 int main()
 {
-    int prev = NULL, curr = NULL;
-    int charCount = 0, wordCount = 0, newLineCount = 0;
+    // Initialize variables
+    int curr = 0, charCount = 0, wordCount = 0, newLineCount = 0,
+        inWord = 0; // Flag to check if currently in a word
+
+    // Take input from user
     printf("Enter some text:\n");
     while ((curr = getchar()) != 4)
     {
+        // Count every input as a character
+        charCount++;
+
         switch (curr)
         {
+            // Newline entered
             case 10:
-            {
                 newLineCount++;
-                if (prev != NULL && prev != 32 && prev != 10)
+                if (inWord)
                 {
-                    wordCount++; // Newline after Non-space && Non-newline character signals end of word
+                    // Newline after word signals end of word
+                    wordCount++;
+                    inWord = 0;
                 }
-            }
-            break;
+                break;
+            
+            // Space entered
             case 32:
-            {
-                if (prev != NULL && prev != 32 && prev != 10)
+                if (inWord)
                 {
-                    wordCount++; // Space after Non-space && Non-newline character signals end of word
+                    // Space after word signals end of word
+                    wordCount++;
+                    inWord = 0;
                 }
-            }
-            break;
+                break;
+
             default:
-                charCount++; // If not space or newline, count as character
+                inWord = 1;
         }
-        prev = curr;
     }
+
+    if (inWord)
+    {
+        // If ^D entered while in a word, count it
+        wordCount++;
+    }
+
+    // Print result
     printf("Characters: %d, Words: %d, Newlines: %d", charCount, wordCount, newLineCount);
 }

@@ -4,16 +4,21 @@
 // the product
 // 
 // @author : Kaushik Aryan
-// @date   : 24-04-2025
+// @date   : 05-05-2025
 
 #include <stdio.h>
 #include "Print.h"
 
 int main()
 {
-    int i = NULL;
+    // Initialize variable
+    int i = 0;
+
+    // Take input from user
     printf("Enter a value for i : ");
     scanf_s("%d", &i);
-    multiplyAndPrint(i);
+
+    // Function call
+    print(i);
     return 0;
 }

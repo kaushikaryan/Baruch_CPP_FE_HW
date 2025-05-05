@@ -1,9 +1,10 @@
 // Operators.cpp
 // 
-// C program to perform numerical operations and print
+// C program to perform numerical operations 
+// and print the result
 // 
 // @author : Kaushik Aryan
-// @date   : 20-04-2025
+// @date   : 03-05-2025
 
 #include <iostream>
 

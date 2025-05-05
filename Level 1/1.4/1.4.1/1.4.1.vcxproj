@@ -21,7 +21,7 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{040fcd45-1bed-4d74-8d4c-5c7239b6a794}</ProjectGuid>
+    <ProjectGuid>{d462fce5-bafb-4b58-8abe-0fa064e9b3e9}</ProjectGuid>
     <RootNamespace>My141</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
@@ -127,7 +127,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="KeyboardInputCounter.cpp" />
+    <ClCompile Include="KeyboardInputCounterWhile.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

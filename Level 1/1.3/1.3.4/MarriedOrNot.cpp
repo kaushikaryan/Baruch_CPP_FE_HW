@@ -1,17 +1,23 @@
 // MarriedOrNot.cpp
 // 
-// C program to check if someone is married usi9ng ternary operator
+// C program to check if someone is married 
+// using ternary operator
 // 
 // @author : Kaushik Aryan
-// @date   : 20-04-2025
+// @date   : 03-05-2025
 
 #include <stdio.h>
 
 int main()
 {
-    int married = NULL;
+    // Initialize variable
+	int married = -1;
+
+	// Take input from user
 	printf("Enter a number if you are married. Enter 0 if you are not.\n");
     scanf_s("%d", &married);
-	printf("%s", married ? "You are married." : "You are not married."); // Using ternary operator to check 
+
+	// Use ternary operator to compute if user is married
+	printf("%s", married ? "You are married." : "You are not married.");
 	return 0;
 }

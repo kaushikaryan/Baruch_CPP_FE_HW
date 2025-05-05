@@ -1,22 +1,33 @@
 // AreaofRightTriangle.cpp
 // 
-// C program to calculate and print area of right triangle
+// C program to calculate and print 
+// area of right triangle
 // 
 // @author : Kaushik Aryan
-// @date   : 20-04-2025
+// @date   : 03-05-2025
 
 #include <stdio.h>
 
 int main()
 {
-	double base = NULL, height = NULL;
+	// Initialize variables
+	 double base = 0, // base of triangle
+		 height = 0; // height of triangle
+	
+	// Take inputs from the user for length of base and height
 	printf("Enter base of triangle: ");
 	scanf_s("%lf", &base);
 	printf("Enter height of triangle: ");
 	scanf_s("%lf", &height);
-	if (base > 0 && height > 0) // Check if inputs are valid
+
+	// Validate and print area of triangle
+	if (base > 0 && height > 0) 
+	{
 		printf("Area of triangle is: %lf", (base * height) / 2);
+	}
 	else
+	{
 		printf("Invalid inputs!");
+	}
 	return 0;
 }

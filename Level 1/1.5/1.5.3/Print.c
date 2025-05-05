@@ -4,10 +4,13 @@
 // the product
 // 
 // @author : Kaushik Aryan
-// @date   : 24-04-2025
+// @date   : 05-05-2025
 
+#include <stdio.h>
 
-void multiplyAndPrint(int a)
+// Function implementation
+void print(int a)
 {
+	// Compute and print result
 	printf("The product of %d and 2 is: %d\n", a, a * 2);
 }

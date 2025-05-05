@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="KeyboardInputCounter.cpp">
+    <ClCompile Include="KeyboardInputCounterWhile.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
