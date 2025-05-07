@@ -73,7 +73,7 @@ int main()
 * DayName function implementation
 *
 * Prints the name of day corresponding
-* to given day number
+* to given day number.
 *
 * @param days  : Array of strings containing day names
 * @param dayNum: Day number input by the user

@@ -19,7 +19,7 @@
 // Macro to print a single integer variable
 #define PRINT1(num1) printf("%d\n", num1);
 
-// Macro to present 
+// Macro to print two integer variables
 #define PRINT2(num1,num2) printf("%d,%d\n", num1, num2);
 
 #endif

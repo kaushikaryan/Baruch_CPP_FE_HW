@@ -41,7 +41,7 @@ int main()
 	// Use PRINT1 macro to print variable num1
 	PRINT1(num1);
 
-	// Use PRINT1 macro to print variable num1 and num2
+	// Use PRINT2 macro to print variable num1 and num2
 	PRINT2(num1, num2);
 
 	// Indicate successful execution

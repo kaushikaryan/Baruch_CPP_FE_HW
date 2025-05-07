@@ -4,7 +4,7 @@
 *
 * C program to calculate the length of a string.
 * The program accepts user input into a string (character array) 
-* and calculates its length
+* and calculates its length.
 *
 * @author   : Kaushik Aryan R
 * @date     : 07-05-2025
@@ -41,7 +41,7 @@ int main()
 * Length function implementation
 *
 * Calculates the length of a string by
-* counting characters till '\0' is encountered
+* counting characters till '\0' is encountered.
 *
 * @param str	: String to measure length
 * @return len	: Length of the string
@@ -50,7 +50,7 @@ int main()
 
 int Length(char str[])
 {
-	// Initialize counter
+	// Initialize counter to 0
 	int len = 0;
 
 	// Count characters until null character
@@ -59,6 +59,7 @@ int Length(char str[])
 		len++;
 	}
 
+	// If character is entered, newline must preceed ^Z
 	// Subtract 1 from len to remove count of newline character
-	return len - 1;
+	return len > 0 ? (len - 1) : len;
 }

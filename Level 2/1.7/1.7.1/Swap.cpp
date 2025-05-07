@@ -15,8 +15,8 @@
 
 #include <stdio.h>  // Standard I/O functions
 
-// swap function declaration
-void swap(int *pt1, int *pt2);
+// Swap function declaration
+void Swap(int *pt1, int *pt2);
 
 /*
 *
@@ -36,8 +36,8 @@ int main()
     int i = 123, j = 456;
     printf("Initial values:\ni: %d\nj: %d\n", i, j);
 
-    // Use swap() to swap the values of variabes i and j
-    swap(&i, &j);
+    // Use Swap() to swap the values of variabes i and j
+    Swap(&i, &j);
 
     // Print the result
     printf("Values after swap:\ni: %d\nj: %d\n", i, j);
@@ -48,7 +48,7 @@ int main()
 
 /*
 *
-* swap function implementation
+* Swap function implementation
 *
 * Swaps the values of two integer values 
 * using pointers
@@ -58,7 +58,7 @@ int main()
 *
 */
 
-void swap(int* pt1, int* pt2)
+void Swap(int* pt1, int* pt2)
 {
     // Assign dereferenced value of pt1 to a temporary variable
     int temp = *pt1;

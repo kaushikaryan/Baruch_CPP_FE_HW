@@ -19,9 +19,9 @@
 #define DEFS_H
 
 // Macro to compute the maximum value between two variables
-#define MAX2(x,y) (x > y ? x : y)
+#define MAX2(x,y) ((x) > (y) ? (x) : (y))
 
 // Macro to compute the maximum value among three variables
-#define MAX3(x,y,z) MAX2(x,y) > (z) ? MAX2(x,y) : (z)
+#define MAX3(x,y,z) ((MAX2(x,y)) > (z) ? (MAX2(x,y)) : (z))
 
 #endif

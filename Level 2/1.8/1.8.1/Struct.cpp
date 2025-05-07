@@ -23,6 +23,7 @@
 * - description
 *
 */
+
 struct Article
 {
 	int articleNumber;
@@ -60,7 +61,7 @@ int main()
 *
 * Print function implementation
 *
-* Prints the contents of struct Article
+* Prints the contents of struct Article.
 *
 * @param p  : Pointer to an object of type Article
 *
