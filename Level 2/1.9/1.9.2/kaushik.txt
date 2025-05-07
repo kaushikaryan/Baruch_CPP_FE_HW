@@ -1,0 +1,7 @@
+hello this is kaushik and this program works as expected.
+this is a new line
+this is a space
+   
+ 
+thank you
+hello

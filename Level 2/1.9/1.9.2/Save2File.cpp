@@ -1,49 +1,113 @@
-// Save2File.cpp
-//
-// C Program to save inputted characters
-// to a file when the user hits enter
-// 
-// @author : Kaushik Aryan
-// @date   : 29-04-2025
+/**
+*
+* Save2File.c
+*
+* C program that reads characters from the keyboard
+* and saves them to a file when the user hits enter.
+* The program ends when the user enters ^A.
+*
+* @author   : Kaushik Aryan R
+* @date     : 07-05-2025
+* @version  : 1.0
+*
+**/
 
-#include <stdio.h>
+#include <stdio.h>		// Standard I/O functions
+#include <string.h>		// String functions
 
-int Save(char* p, char filename[100]);
+// Save function declaration
+void Save(char* p, char fileName[100]);
+
+/*
+*
+* main function: Entry point of the program
+*
+* Reads characters from the keyboard and saves
+* them to a file when the user hits enter.
+* Exits when when user enters ^A.
+*
+* @return 0 on successful execution
+*
+*/
 
 int main()
 {
-	int c = NULL;
-	char a[1000], filename[100];
-	char* p = a;
-	printf("Enter file name as <filename.txt>: ");
-	gets_s(filename);
+	// Initialize variables
+	int c = 0;					// Variable to store input character
+	char buffer[1000] = {},		// Buffer to store input line
+		fileName[100] = {};		// String to store file name
+	char* ptr = buffer;			// Pointer to current position in 
+
+	// Take file name as input from user
+	printf("Enter file name: ");
+	gets_s(fileName);
+
+	// Add .txt extension to file name
+	strcat_s(fileName, ".txt");
+
+	printf("Writing to file %s\n", fileName);
+
+	// Read input characters until ^A is detected
 	while ((c = getchar()) != 1)
 	{
+		// Call Save() when newline '\n' detected
 		if (c == 10)
 		{
-			*p = '\0';
-			int err = Save(a, filename);
-			if (err == 1)
-				break;
-			p = a;
+			*ptr = '\0';			// Add null character to signal end of string
+			Save(buffer, fileName);
+			ptr = buffer;			// Reset pointer to beginning of buffer
 		}
 		else
 		{
-			*(p++) = c;
+			// Store character in buffer and advance pointer
+			*(ptr++) = c;
 		}
 	}
+
+	// Print exit message
+	printf("CTRL + A is a correct ending.");
+
+	// Signal successful execution
 	return 0;
 }
 
-int Save(char* a, char filename[100])
+/*
+*
+* Save function implementation
+*
+* Saves the contents of a character array into
+* a text file with name given by user
+*
+* @param ptr		: Pointer to the character array
+* @param fileName	: String with file name specified by user
+*
+*/
+
+void Save(char* ptr, char fileName[100])
 {
 	FILE* f;
-	errno_t error = fopen_s(&f, filename, "w");
-	if (error != 0) {
-		printf("File %s does not exist", filename);
-		return 1;
+	// "a+" mode creates the file if it doesnt exist, 
+	// or appends to the file if it already exists
+	errno_t error = fopen_s(&f, fileName, "a+");   
+
+	// Check if file opened successfully
+	if (error != 0)
+	{
+		printf("Error: could not open %s", fileName);
+		return;
 	}
-	while (*a != '\0')
-		fputc(*(a++), f);
-	return 0;
+
+	// Write characters to file
+	while (*ptr != '\0')
+	{
+		fputc(*(ptr++), f);
+	}
+
+	// Append newline
+	fputc('\n', f);
+
+	// Close the file
+	fclose(f);
+
+	return;
 }

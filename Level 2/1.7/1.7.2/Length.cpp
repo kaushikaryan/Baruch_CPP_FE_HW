@@ -1,15 +1,22 @@
-// Length.cpp
-//
-// C program calculate the length of a string   
-// 
-// @author : Kaushik Aryan
-// @date   : 29-04-2025
+/**
+*
+* Length.c
+*
+* C program to calculate the length of a string.
+* The program accepts user input into a string (character array) 
+* and calculates its length
+*
+* @author   : Kaushik Aryan R
+* @date     : 07-05-2025
+* @version  : 1.0
+*
+**/
 
+/* Calculate the length of a string */
 #include <stdio.h>
 #define MAXLINE 30
-
+// String length declaration
 int Length(char str[]);
-
 int main()
 {
 	char string[MAXLINE + 1]; // Line of maxium 30 chars + \0
@@ -29,14 +36,29 @@ int main()
 }
 /* Implement the Length() function here */
 
+/*
+*
+* Length function implementation
+*
+* Calculates the length of a string by
+* counting characters till '\0' is encountered
+*
+* @param str	: String to measure length
+* @return len	: Length of the string
+*
+*/
+
 int Length(char str[])
 {
-	char* ptr = str;
+	// Initialize counter
 	int len = 0;
-	while (*str != '\0')
+
+	// Count characters until null character
+	while (str[len] != '\0')
 	{
 		len++;
-		str++;
 	}
-	return len;
+
+	// Subtract 1 from len to remove count of newline character
+	return len - 1;
 }
