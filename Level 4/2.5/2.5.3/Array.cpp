@@ -51,7 +51,7 @@ Array::~Array()
 Point& Array::GetElement(int index) const
 {
 	// If index out of bounds, return the first element
-	if (index >= m_size)
+	if (index < 0 || index >= m_size)
 	{
 		return m_data[0];
 	}
@@ -64,7 +64,7 @@ Point& Array::GetElement(int index) const
 void Array::SetElement(int index, const Point& p)
 {
 	// Set the element only if index is not out of bounds
-	if (index >= m_size)
+	if (index < 0 || index >= m_size)
 	{
 		return;
 	}
@@ -108,7 +108,7 @@ Array& Array::operator=(Array& source)
 Point& Array::operator[](int index)
 {
 	// If index out of bounds, return the first element
-	if (index >= m_size)
+	if (index < 0 || index >= m_size)
 	{
 		return m_data[0];
 	}
@@ -128,7 +128,7 @@ Point& Array::operator[](int index)
 const Point& Array::operator[](int index) const
 {
 	// If index out of bounds, return the first element
-	if (index >= m_size)
+	if (index < 0 || index >= m_size)
 	{
 		return m_data[0];
 	}

@@ -39,7 +39,9 @@ int main()
 	cout << "Distance between P1 & P2: " << p1->Distance(*p2) << "\n" << "Distance between P2 & P3: " << p2->Distance(*p3) << endl;
 
 	// Deleting Point objects created on the heap
-	delete p1, p2, p3;
+	delete p1;
+	delete p2;
+	delete p3;
 
 	// Prompt the user for input
 	cout << "Enter the size of the array: " << endl;
